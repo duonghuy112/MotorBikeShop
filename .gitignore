@@ -1,3 +1,9 @@
+# Ignore Servers folder
+Servers
+
+# Ignore .metadata folder
+.metadata
+
 # Compiled class file
 *.class
 

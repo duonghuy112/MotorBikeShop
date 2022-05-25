@@ -19,9 +19,9 @@ import com.tromic.service.impl.ProductServiceImpl;
 @WebServlet("/AddToCart")
 public class AddToCartController extends HttpServlet {
 	private static final long serialVersionUID = 1L;
-	private static ProductService productService;
+	private ProductService productService;
 	
-	static {
+	public AddToCartController() {
 		productService = new ProductServiceImpl();
 	}
 

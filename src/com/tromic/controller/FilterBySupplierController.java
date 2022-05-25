@@ -24,11 +24,11 @@ import com.tromic.service.impl.SupplierServiceImpl;
 @WebServlet("/Supplier")
 public class FilterBySupplierController extends HttpServlet {
 	private static final long serialVersionUID = 1L;
-	private static ProductService productService;
-	private static CategoryService categoryService;
-	private static SupplierService supplierService;
+	private ProductService productService;
+	private CategoryService categoryService;
+	private SupplierService supplierService;
 	
-	static {
+	public FilterBySupplierController() {
 		productService = new ProductServiceImpl();
 		categoryService = new CategoryServiceImpl();
 		supplierService = new SupplierServiceImpl();

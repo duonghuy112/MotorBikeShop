@@ -17,9 +17,9 @@ import com.tromic.service.impl.UserServiceImpl;
 @WebServlet("/UpdateProfile")
 public class UpdateProfileController extends HttpServlet {
 	private static final long serialVersionUID = 1L;
-	private static UserService userService;
+	private UserService userService;
 	
-	static {
+	public UpdateProfileController() {
 		userService = new UserServiceImpl();
 	}
        

@@ -22,10 +22,10 @@ import com.tromic.service.impl.ReviewServiceImpl;
 @WebServlet("/Home")
 public class HomeController extends HttpServlet {
 	private static final long serialVersionUID = 1L;
-	private static ProductService productService;
-	private static ReviewService reviewService;
+	private ProductService productService;
+	private ReviewService reviewService;
 	
-	static {
+	public HomeController() {
 		productService = new ProductServiceImpl();
 		reviewService = new ReviewServiceImpl();
 	}

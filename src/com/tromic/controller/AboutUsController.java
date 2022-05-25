@@ -19,9 +19,9 @@ import com.tromic.service.impl.ReviewServiceImpl;
 @WebServlet("/About")
 public class AboutUsController extends HttpServlet {
 	private static final long serialVersionUID = 1L;
-	private static ReviewService reviewService;
+	private ReviewService reviewService;
 	
-	static {
+	public AboutUsController() {
 		reviewService = new ReviewServiceImpl();
 	}
        

@@ -29,10 +29,10 @@ import com.tromic.service.impl.UserServiceImpl;
 public class ContactController extends HttpServlet {
 	
 	private static final long serialVersionUID = 1L;
-	private static UserService userService;
-	private static ReviewService reviewService;
+	private UserService userService;
+	private ReviewService reviewService;
 	
-	static {
+	public ContactController() {
 		userService = new UserServiceImpl();
 		reviewService = new ReviewServiceImpl();
 	}

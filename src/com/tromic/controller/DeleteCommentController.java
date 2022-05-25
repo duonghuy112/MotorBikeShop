@@ -13,9 +13,9 @@ import com.tromic.service.impl.CommentServiceImpl;
 @WebServlet("/DeleteComment")
 public class DeleteCommentController extends HttpServlet {
 	private static final long serialVersionUID = 1L;
-	private static CommentService commentService;
+	private CommentService commentService;
 	
-	static {
+	public DeleteCommentController() {
 		commentService = new CommentServiceImpl();
 	}
 

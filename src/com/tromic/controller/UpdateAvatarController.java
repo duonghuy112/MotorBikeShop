@@ -20,9 +20,9 @@ import com.tromic.service.impl.UserServiceImpl;
 @WebServlet("/UploadAvatar")
 public class UpdateAvatarController extends HttpServlet {
 	private static final long serialVersionUID = 1L;
-	private static UserService userService;
+	private UserService userService;
 	
-	static {
+	public UpdateAvatarController() {
 		userService = new UserServiceImpl();
 	}
 

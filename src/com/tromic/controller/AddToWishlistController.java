@@ -18,9 +18,9 @@ import com.tromic.service.impl.ProductServiceImpl;
 @WebServlet("/AddToWishlist")
 public class AddToWishlistController extends HttpServlet {
 	private static final long serialVersionUID = 1L;
-	private static ProductService productService;
+	private ProductService productService;
 	
-	static {
+	public AddToWishlistController() {
 		productService = new ProductServiceImpl();
 	}
        

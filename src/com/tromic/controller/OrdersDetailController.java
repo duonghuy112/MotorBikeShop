@@ -17,9 +17,9 @@ import com.tromic.service.impl.OrderDetailServiceImpl;
 @WebServlet("/OrdersDetail")
 public class OrdersDetailController extends HttpServlet {
 	private static final long serialVersionUID = 1L;
-	private static OrderDetailService orderDetailService;
+	private OrderDetailService orderDetailService;
 	
-	static {
+	public OrdersDetailController() {
 		orderDetailService = new OrderDetailServiceImpl();
 	}
        

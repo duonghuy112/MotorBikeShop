@@ -15,9 +15,9 @@ import com.tromic.service.impl.UserServiceImpl;
 @WebServlet("/ChangePassword")
 public class ChangePasswordController extends HttpServlet {
 	private static final long serialVersionUID = 1L;
-	private static UserService userService;
+	private UserService userService;
 	
-	static { 
+	public ChangePasswordController { 
 		userService = new UserServiceImpl();
 	}
        

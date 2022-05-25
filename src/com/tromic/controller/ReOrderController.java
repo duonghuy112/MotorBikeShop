@@ -13,9 +13,9 @@ import com.tromic.service.impl.OrderServiceImpl;
 @WebServlet("/ReOrder")
 public class ReOrderController extends HttpServlet {
 	private static final long serialVersionUID = 1L;
-	private static OrderService orderService;
+	private OrderService orderService;
 	
-	static {
+	public ReOrderController() {
 		orderService = new OrderServiceImpl();
 	}   
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {

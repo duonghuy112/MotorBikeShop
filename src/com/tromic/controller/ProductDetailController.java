@@ -22,10 +22,10 @@ import com.tromic.service.impl.ProductServiceImpl;
 @WebServlet("/ProductDetail")
 public class ProductDetailController extends HttpServlet {
 	private static final long serialVersionUID = 1L;
-	private static ProductService productService;
-	private static CommentService commentService;
+	private ProductService productService;
+	private CommentService commentService;
 	
-	static {
+	public ProductDetailController() {
 		productService = new ProductServiceImpl();
 		commentService = new CommentServiceImpl();
 	}

@@ -23,11 +23,11 @@ import com.tromic.service.impl.SupplierServiceImpl;
 @WebServlet("/Shop")
 public class ShopController extends HttpServlet {
 	private static final long serialVersionUID = 1L;
-	private static ProductService productService;
-	private static CategoryService categoryService;
-	private static SupplierService supplierService;
+	private ProductService productService;
+	private CategoryService categoryService;
+	private SupplierService supplierService;
 	
-	static {
+	public ShopController() {
 		productService = new ProductServiceImpl();
 		categoryService = new CategoryServiceImpl();
 		supplierService = new SupplierServiceImpl();

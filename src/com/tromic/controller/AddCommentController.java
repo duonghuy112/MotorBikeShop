@@ -19,10 +19,10 @@ import com.tromic.service.impl.ProductServiceImpl;
 @WebServlet("/AddComment")
 public class AddCommentController extends HttpServlet {
 	private static final long serialVersionUID = 1L;
-	private static CommentService commentService;
-	private static ProductService productService;
+	private CommentService commentService;
+	private ProductService productService;
 	
-	static {
+	public AddCommentController() {
 		commentService = new CommentServiceImpl();
 		productService = new ProductServiceImpl();
 	}

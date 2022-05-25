@@ -13,9 +13,9 @@ import com.tromic.service.impl.OrderServiceImpl;
 @WebServlet("/CancelOrder")
 public class CancelOrderController extends HttpServlet {
 	private static final long serialVersionUID = 1L;
-	private static OrderService orderService;
+	private OrderService orderService;
 	
-	static {
+	public CancelOrderController {
 		orderService = new OrderServiceImpl();
 	}
        

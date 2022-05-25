@@ -33,11 +33,11 @@ import com.tromic.service.impl.ShippingServiceImpl;
 @WebServlet("/Checkout")
 public class CheckoutController extends HttpServlet {
 	private static final long serialVersionUID = 1L;
-	private static OrderService orderService;
-	private static OrderDetailService orderDetailService;
-	private static ShippingService shippingService;
+	private OrderService orderService;
+	private OrderDetailService orderDetailService;
+	private ShippingService shippingService;
     
-	static {
+	public CheckoutController() {
 		orderService = new OrderServiceImpl();
 		orderDetailService = new OrderDetailServiceImpl();
 		shippingService = new ShippingServiceImpl();
